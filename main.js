@@ -6,9 +6,6 @@ let menus = document.querySelectorAll(".menus button");
 let menus2 = document.querySelectorAll(".side_menu_list button");
 //console.log("menus", menus);
 
-
-
-
 menus.forEach((menu) =>
     menu.addEventListener("click", (event) => getNewsByTopic(event))
 );
