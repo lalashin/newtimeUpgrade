@@ -1,0 +1,177 @@
+/*reset*/
+a {
+    color: #303038;
+    text-decoration-line: none;
+}
+
+a:hover {
+    text-decoration-line: underline;
+}
+
+/*layout*/
+.pc_only {
+    display: block;
+}
+
+.mo_only {
+    display: none;
+}
+
+@media screen and (max-width: 63rem) {
+    .pc_only {
+        display: none;
+    }
+
+    .mo_only {
+        display: block;
+    }
+
+    .hide {
+        display: inline;
+    }
+
+
+}
+
+
+
+/*style*/
+
+.head_line {
+    margin-top: 1em;
+    display: flex;
+    justify-content: center;
+}
+
+.head_line svg {
+    width: 450px;
+}
+
+.menus {
+    margin-top: 1em;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    border-top: 1px solid #ebebeb;
+
+}
+
+.menus button {
+    border: none;
+    background: none;
+    margin: 5px;
+}
+
+.menus button:hover {
+    background: lightblue;
+}
+
+.news_board {
+    border-top: 4px double black;
+}
+
+.news_img_size {
+    max-width: 100%;
+    max-height: 250px;
+}
+
+.news {
+    border-bottom: 2px solid black;
+}
+
+/*모바일 토글메뉴*/
+.side_menu {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    background: #f1f1f1;
+}
+
+.side_menu.active {
+    width: 300px;
+}
+
+.side_menu_list button {
+    margin: 5px;
+    border: none;
+    background: none;
+    width: 120px;
+}
+
+.side_menu .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+    border: none;
+    background: none;
+}
+
+.side_menu_list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.side_menu_list button:hover {
+    background-color: lightblue;
+    border-radius: 3px;
+}
+
+.head_line_section .head_btn {
+    display: flex;
+    padding: 10px 0;
+    height: 35px;
+
+}
+
+.head_line_section .head_btn i {
+    padding: 5px;
+}
+
+.head_line_section .head_btn i:hover {
+    background-color: lightblue;
+    border-radius: 3px;
+}
+
+#input_area {
+    display: none;
+
+}
+
+#input_area input {
+    border: 1px solid rgb(226, 226, 226);
+    height: 28px;
+    border-radius: 5px;
+}
+
+#input_area button {
+    border-radius: 5px;
+    height: 28px;
+}
+
+.pagination_area {
+    padding: 30px;
+}
+
+.pagination_area nav ul {
+    display: flex;
+    justify-content: center;
+}
+
+@media screen and (max-width: 63rem) {
+    .menus {
+        display: none;
+    }
+
+    .side_menu.active {
+        width: 70%;
+    }
+}
